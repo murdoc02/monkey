@@ -3,10 +3,10 @@ package lexer
 import "token"
 
 type Lexer struct {
-	input	string
-	position int // current position in input
-	readPosition int //current reading position in input
-	ch	byte // current char uner examination
+	input        string
+	position     int  // current position in input
+	readPosition int  //current reading position in input
+	ch           byte // current char uner examination
 }
 
 func New(input string) *Lexer {
