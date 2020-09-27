@@ -17,7 +17,7 @@ const (
 	ASSIGN = "="
 	PLUS   = "+"
 	BANG   = "!"
-	MINUS  = "="
+	MINUS  = "-"
 	SLASH  = "/"
 	ASTERISK = "*"
 
