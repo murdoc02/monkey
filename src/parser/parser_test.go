@@ -1,9 +1,9 @@
 package parser
 
 import (
-	"testing"
 	"ast"
 	"lexer"
+	"testing"
 )
 
 func TestLetStatements(t *testing.T) {
@@ -33,7 +33,7 @@ let  = 838383;
 		{"foobar"},
 	}
 
-	for i, tt := range tests{
+	for i, tt := range tests {
 		stmt := program.Statements[i]
 		if !testLetStatements(t, stmt, tt.expectedIdentifier) {
 			return
@@ -74,7 +74,7 @@ func testLetStatements(t *testing.T, s ast.Statement, name string) bool {
 	if letStmt.Name.TokenLiteral() != name {
 		t.Errorf("letStmt.Name.TokenLiteral() not '%s'. got=%s",
 			name, letStmt.Name.TokenLiteral())
-			return false
+		return false
 	}
 	return true
 }
