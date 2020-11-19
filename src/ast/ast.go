@@ -14,9 +14,9 @@ type IntegerLiteral struct {
 	Value int64
 }
 
-func (il *IntegerLiteral) expressionNode() {}
-func (il *IntegerLiteral) TokenLiteral() string {return il.Token.Literal}
-func (il *IntegerLiteral) String() string {return il.Token.Literal}
+func (il *IntegerLiteral) expressionNode()      {}
+func (il *IntegerLiteral) TokenLiteral() string { return il.Token.Literal }
+func (il *IntegerLiteral) String() string       { return il.Token.Literal }
 
 func (p *Program) TokenLiteral() string {
 	if len(p.Statements) > 0 {
@@ -119,12 +119,12 @@ func (es *ExpressionStatement) String() string {
 }
 
 type PrefixExpression struct {
-	Token			token.Token // The prefix token, e.g. !
-	Operator	string
-	Right			Expression
+	Token    token.Token // The prefix token, e.g. !
+	Operator string
+	Right    Expression
 }
 
-func (pe *PrefixExpression) expressionNode()		{}
+func (pe *PrefixExpression) expressionNode()      {}
 func (pe *PrefixExpression) TokenLiteral() string { return pe.Token.Literal }
 func (pe *PrefixExpression) String() string {
 	var out bytes.Buffer

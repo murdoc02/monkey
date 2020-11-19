@@ -4,8 +4,8 @@ import (
 	"ast"
 	"fmt"
 	"lexer"
-	"token"
 	"strconv"
+	"token"
 )
 
 const (
@@ -202,7 +202,7 @@ func (p *Parser) noPrefixParseFnError(t token.TokenType) {
 
 func (p *Parser) parsePrefixExpression() ast.Expression {
 	expression := &ast.PrefixExpression{
-		Token:		p.curToken,
+		Token:    p.curToken,
 		Operator: p.curToken.Literal,
 	}
 
