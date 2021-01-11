@@ -2,8 +2,8 @@ package parser
 
 import (
 	"ast"
-	"lexer"
 	"fmt"
+	"lexer"
 	"testing"
 )
 
@@ -585,6 +585,7 @@ func TestCallExpressionParsing(t *testing.T) {
 	testInfixExpression(t, exp.Arguments[1], 2, "*", 3)
 	testInfixExpression(t, exp.Arguments[2], 4, "+", 5)
 }
+
 /*
 func TestCallExpressionParameterParsing(t *testing.T) {
 	tests := []struct {
@@ -788,12 +789,12 @@ func checkParserErrors(t *testing.T, p *Parser) {
 
 func TestFunctionParameterParsing(t *testing.T) {
 	tests := []struct {
-		input string
+		input          string
 		expectedParams []string
 	}{
 		{input: "fn() {};", expectedParams: []string{}},
 		{input: "fn(x) {};", expectedParams: []string{"x"}},
-		{input: "fn(x, y, z) {};", expectedParams: []string{"x","y","z"}},
+		{input: "fn(x, y, z) {};", expectedParams: []string{"x", "y", "z"}},
 	}
 
 	for _, tt := range tests {
