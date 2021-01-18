@@ -159,7 +159,7 @@ f(10);`,
 		testIntegerObject(t, evaluated, tt.expected)
 	}
 }
-
+/*
 func TestErrorHandling(t *testing.T) {
 	tests := []struct {
 		input           string
@@ -303,14 +303,14 @@ ourFunction(20) + first + second;`
 
 	testIntegerObject(t, testEval(input), 70)
 }
-
+*/
 func testEval(input string) object.Object {
 	l := lexer.New(input)
 	p := parser.New(l)
 	program := p.ParseProgram()
-	env := object.NewEnvironment()
+	//env := object.NewEnvironment()
 
-	return Eval(program, env)
+	return Eval(program)//, env)
 }
 
 func testIntegerObject(t *testing.T, obj object.Object, expected int64) bool {
