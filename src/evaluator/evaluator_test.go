@@ -91,11 +91,11 @@ func TestIfElseExpressions(t *testing.T) {
 		input    string
 		expected interface{}
 	}{
-		{"if (true) { 10 }", 10},
-		{"if (false) { 10 }", nil},
+		{"if (true) { 11 }", 11},
+		{"if (false) { 33 }", nil},
 		{"if (1) { 10 }", 10},
 		{"if (1 < 2) { 10 }", 10},
-		{"if (1 > 2) { 10 }", nil},
+		{"if (1 > 2) { 12 }", nil},
 		{"if (1 > 2) { 10 } else { 20 }", 20},
 		{"if (1 < 2) { 10 } else { 20 }", 10},
 	}
