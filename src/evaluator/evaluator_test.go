@@ -159,7 +159,7 @@ f(10);`,
 		testIntegerObject(t, evaluated, tt.expected)
 	}
 }
-/*
+
 func TestErrorHandling(t *testing.T) {
 	tests := []struct {
 		input           string
@@ -227,7 +227,7 @@ if (10 > 1) {
 		}
 	}
 }
-
+/*
 func TestLetStatements(t *testing.T) {
 	tests := []struct {
 		input    string
