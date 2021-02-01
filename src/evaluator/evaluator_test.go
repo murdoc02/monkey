@@ -227,7 +227,7 @@ if (10 > 1) {
 		}
 	}
 }
-/*
+
 func TestLetStatements(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -243,7 +243,7 @@ func TestLetStatements(t *testing.T) {
 		testIntegerObject(t, testEval(tt.input), tt.expected)
 	}
 }
-
+/*
 func TestFunctionObject(t *testing.T) {
 	input := "fn(x) { x + 2; };"
 
@@ -308,9 +308,9 @@ func testEval(input string) object.Object {
 	l := lexer.New(input)
 	p := parser.New(l)
 	program := p.ParseProgram()
-	//env := object.NewEnvironment()
+	env := object.NewEnvironment()
 
-	return Eval(program)//, env)
+	return Eval(program, env)
 }
 
 func testIntegerObject(t *testing.T, obj object.Object, expected int64) bool {
