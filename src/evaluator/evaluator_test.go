@@ -243,7 +243,7 @@ func TestLetStatements(t *testing.T) {
 		testIntegerObject(t, testEval(tt.input), tt.expected)
 	}
 }
-/*
+
 func TestFunctionObject(t *testing.T) {
 	input := "fn(x) { x + 2; };"
 
@@ -286,7 +286,7 @@ func TestFunctionApplication(t *testing.T) {
 		testIntegerObject(t, testEval(tt.input), tt.expected)
 	}
 }
-
+/*
 func TestEnclosingEnvironments(t *testing.T) {
 	input := `
 let first = 10;
