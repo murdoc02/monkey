@@ -286,6 +286,7 @@ func TestFunctionApplication(t *testing.T) {
 		testIntegerObject(t, testEval(tt.input), tt.expected)
 	}
 }
+
 /*
 func TestEnclosingEnvironments(t *testing.T) {
 	input := `

@@ -2,12 +2,12 @@ package repl
 
 import (
 	"bufio"
+	"evaluator"
 	"fmt"
 	"io"
 	"lexer"
-	"parser"
-	"evaluator"
 	"object"
+	"parser"
 )
 
 const PROMPT = ">> "
