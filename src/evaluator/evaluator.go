@@ -287,7 +287,7 @@ func applyFunction(fn object.Object, args []object.Object) object.Object {
 		return newError("not a function: %s", fn.Type())
 	}
 
-	extendedEnv := extendFunctionEnv(function, args)
+	extendedEnv := extendedFunctionEnv(function, args)
 	evaluated := Eval(function.Body, extendedEnv)
 	return unwrapReturnValue(evaluated)
 }
@@ -309,4 +309,5 @@ func unwrapReturnValue(obj object.Object) object.Object {
 	if returnValue, ok := obj.(*object.ReturnValue); ok {
 		return returnValue.Value
 	}
+	return obj
 }
