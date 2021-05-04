@@ -355,7 +355,7 @@ func TestStringConcatenation(t *testing.T) {
 		t.Errorf("String has wrong value. got=%q", str.Value)
 	}
 }
-/*
+
 func TestBuiltinFunctions(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -419,7 +419,7 @@ func TestBuiltinFunctions(t *testing.T) {
 		}
 	}
 }
-
+/*
 func TestArrayLiterals(t *testing.T) {
 	input := "[1, 2 * 2, 3 + 3]"
 
