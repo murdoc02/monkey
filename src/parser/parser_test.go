@@ -696,7 +696,6 @@ func TestStringLiteralExpression(t *testing.T) {
 		t.Errorf("literal.Value not %q. got=%q", "hello world", literal.Value)
 	}
 }
-/*
 
 func TestParsingEmptyArrayLiterals(t *testing.T) {
 	input := "[]"
@@ -762,7 +761,7 @@ func TestParsingIndexExpressions(t *testing.T) {
 		return
 	}
 }
-
+/*
 func TestParsingEmptyHashLiteral(t *testing.T) {
 	input := "{}"
 
