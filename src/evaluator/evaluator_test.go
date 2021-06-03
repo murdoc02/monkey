@@ -419,7 +419,7 @@ func TestBuiltinFunctions(t *testing.T) {
 		}
 	}
 }
-/*
+
 func TestArrayLiterals(t *testing.T) {
 	input := "[1, 2 * 2, 3 + 3]"
 
@@ -438,7 +438,7 @@ func TestArrayLiterals(t *testing.T) {
 	testIntegerObject(t, result.Elements[1], 4)
 	testIntegerObject(t, result.Elements[2], 6)
 }
-
+/*
 func TestArrayIndexExpressions(t *testing.T) {
 	tests := []struct {
 		input    string
