@@ -496,6 +496,7 @@ func TestArrayIndexExpressions(t *testing.T) {
 		}
 	}
 }
+
 /*
 func TestHashLiterals(t *testing.T) {
 	input := `let two = "two";
