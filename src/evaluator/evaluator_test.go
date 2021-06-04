@@ -438,7 +438,7 @@ func TestArrayLiterals(t *testing.T) {
 	testIntegerObject(t, result.Elements[1], 4)
 	testIntegerObject(t, result.Elements[2], 6)
 }
-/*
+
 func TestArrayIndexExpressions(t *testing.T) {
 	tests := []struct {
 		input    string
@@ -496,7 +496,7 @@ func TestArrayIndexExpressions(t *testing.T) {
 		}
 	}
 }
-
+/*
 func TestHashLiterals(t *testing.T) {
 	input := `let two = "two";
 	{
