@@ -761,7 +761,7 @@ func TestParsingIndexExpressions(t *testing.T) {
 		return
 	}
 }
-/*
+
 func TestParsingEmptyHashLiteral(t *testing.T) {
 	input := "{}"
 
@@ -935,7 +935,7 @@ func TestParsingHashLiteralsWithExpressions(t *testing.T) {
 		testFunc(value)
 	}
 }
-*/
+
 func testLetStatement(t *testing.T, s ast.Statement, name string) bool {
 	if s.TokenLiteral() != "let" {
 		t.Errorf("s.TokenLiteral not 'let'. got=%q", s.TokenLiteral())
