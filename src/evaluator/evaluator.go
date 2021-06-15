@@ -384,7 +384,7 @@ func evalHashLiteral(
 	node *ast.HashLiteral,
 	env *object.Environment,
 ) object.Object {
-	pairs := make (map[object.HashKey]object.HashPair)
+	pairs := make(map[object.HashKey]object.HashPair)
 
 	for keyNode, valueNode := range node.Pairs {
 		key := Eval(keyNode, env)
