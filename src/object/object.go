@@ -1,11 +1,11 @@
 package object
 
 import (
+	"ast"
 	"bytes"
 	"fmt"
-	"ast"
-	"strings"
 	"hash/fnv"
+	"strings"
 )
 
 type ObjectType string
@@ -18,9 +18,9 @@ const (
 	ERROR_OBJ        = "ERROR"
 	FUNCTION_OBJ     = "FUNCTION"
 	STRING_OBJ       = "STRING"
-	BUILTIN_OBJ = "BUILTIN"
-	ARRAY_OBJ = "ARRAY"
-	HASH_OBJ = "HASH"
+	BUILTIN_OBJ      = "BUILTIN"
+	ARRAY_OBJ        = "ARRAY"
+	HASH_OBJ         = "HASH"
 )
 
 type BuiltinFunction func(args ...Object) Object
@@ -30,7 +30,7 @@ type Builtin struct {
 }
 
 func (b *Builtin) Type() ObjectType { return BUILTIN_OBJ }
-func (b *Builtin) Inspect() string { return "builtin function" }
+func (b *Builtin) Inspect() string  { return "builtin function" }
 
 type ReturnValue struct {
 	Value Object
@@ -99,7 +99,7 @@ type String struct {
 }
 
 func (s *String) Type() ObjectType { return STRING_OBJ }
-func (s *String) Inspect() string { return s.Value }
+func (s *String) Inspect() string  { return s.Value }
 
 type Array struct {
 	Elements []Object
@@ -121,7 +121,7 @@ func (ao *Array) Inspect() string {
 }
 
 type HashKey struct {
-	Type ObjectType
+	Type  ObjectType
 	Value uint64
 }
 
@@ -154,7 +154,7 @@ func (s *String) HashKey() HashKey {
 }
 
 type HashPair struct {
-	Key Object
+	Key   Object
 	Value Object
 }
 
@@ -172,7 +172,7 @@ func (h *Hash) Inspect() string {
 		pairs = append(pairs, fmt.Sprintf("%s: %s", pair.Key.Inspect(), pair.Value.Inspect()))
 	}
 
-	out. WriteString("{")
+	out.WriteString("{")
 	out.WriteString(strings.Join(pairs, ", "))
 	out.WriteString("}")
 

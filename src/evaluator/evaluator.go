@@ -408,7 +408,7 @@ func evalHashLiteral(
 		pairs[hashed] = object.HashPair{Key: key, Value: value}
 	}
 
-	return &object.Hash{Pairs:pairs}
+	return &object.Hash{Pairs: pairs}
 }
 
 func evalHashIndexExpression(hash, index object.Object) object.Object {

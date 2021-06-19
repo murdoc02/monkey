@@ -1,8 +1,8 @@
 package parser
 
 import (
-	"fmt"
 	"ast"
+	"fmt"
 	"lexer"
 	"testing"
 )
@@ -1026,7 +1026,6 @@ func testIntegerLiteral(t *testing.T, il ast.Expression, value int64) bool {
 
 	return true
 }
-
 
 func testIdentifier(t *testing.T, exp ast.Expression, value string) bool {
 	ident, ok := exp.(*ast.Identifier)
